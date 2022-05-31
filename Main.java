@@ -1,9 +1,9 @@
-package HomeWork2;
+package homeWork2;
 
 public class Main {
 
     public static void main(String[] args) {
-        Employee employee1 = new Employee("Vova","Semenkov", 34,"6464",25000);
+        Employee employee1 = new Employee("Vova","Semenkov", 34,"64645",25000);
         EmployeeNamePrinter namePrinter = new EmployeeNamePrinter();
         namePrinter.print(employee1);
 
