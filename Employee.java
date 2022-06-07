@@ -25,15 +25,18 @@ public class Employee {
         this.team = team;
 
         if (salary == 0){
-            switch (position){
-                case JUNIOR : salary = 5000;
-                    break;
-                case MIDDLE : salary = 10000;
-                    break;
-                case SENIOR: salary = 20000;
-                    break;
-                default: salary = -100000;
-            }
+            salary = position.minSalary;
+
+            //switch (position){
+                //case JUNIOR : salary = 5000;
+                  //  break;
+                //case MIDDLE : salary = 10000;
+                    //break;
+                //case SENIOR: salary = 20000;
+                   // break;
+                //default: salary = -100000;
+            //}
+
             //if (position == POSITION.JUNIOR){
                 //this.salary = 5000;
             //} else if (position == POSITION.MIDDLE){
