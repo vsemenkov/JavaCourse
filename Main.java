@@ -45,5 +45,29 @@ public class Main {
             namePrinter.print(employee);
             salaryPrinter.print(employee);
         }
+
+
+        Employee employee4 = new Employee("Vova", "Semenkov", 34, "64645", 25000, POSITION.JUNIOR);
+        System.out.println(employee4.getFirstName());
+        employee4.setFirstName("New first name");
+        System.out.println(employee4.getFirstName());
+        System.out.println("======================\n");
+
+        Employee employee5 = new Employee();
+        employee5.setTeam("New Team");
+        employee5.setAge(48);
+        employee5.setPosition(POSITION.SENIOR);
+
+        System.out.println(employee5.getTeam());
+        System.out.println(employee5.getAge());
+        System.out.println(employee5.getPosition());
+
+
+        var employee6 = new EmployeeBuilder()
+                .setFirstName("SASHA");
+        System.out.println(employee6.getFirstName());
+
+
     }
+
 }

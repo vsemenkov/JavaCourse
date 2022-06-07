@@ -10,6 +10,55 @@ public class Employee {
     public long salary;
     public POSITION position; //employee position
 
+    public Employee() {
+
+    }
+
+    public void setFirstName(String firstName1) {
+        this.firstName = firstName1;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
+    public void setPosition(POSITION position) {
+        this.position = position;
+    }
+
+    public  String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public int getAge() {
+        return age;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public POSITION getPosition() {
+        return position;
+    }
+
     public Employee(String firstName, String lastName, int age, String team, POSITION position){
         this(firstName, lastName, age, team,0, position);
     }
