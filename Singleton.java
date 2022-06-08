@@ -1,8 +1,8 @@
 package homeWork2;
-
+//dlya hraneniya dannih
 public class Singleton {
 
-    public static final Singleton INSTANCE = new Singleton();
+    public static final String INSTANCE = "new Singleton()";
 
     //private static Singleton instance;
     private Singleton() {

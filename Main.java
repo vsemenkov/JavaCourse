@@ -73,6 +73,7 @@ public class Main {
         //var singleton1 = Singleton.getInstance();
         //var singleton2 = Singleton.getInstance();
         System.out.println(singleton1 == singleton2);
+        System.out.println(singleton1);
 
 
     }
