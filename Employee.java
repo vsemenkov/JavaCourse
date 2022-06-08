@@ -93,7 +93,7 @@ public class Employee {
            // } else if (position == POSITION.SENIOR){
             //    this.salary = 20000;
             //}
-       // } else {
+        } else {
             this.salary = salary;
         }
         this.position = position;

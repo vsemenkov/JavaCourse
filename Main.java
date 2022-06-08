@@ -3,7 +3,7 @@ package homeWork2;
 public class Main {
 
     public static void main(String[] args) {
-        Employee employee1 = new Employee("Vova", "Semenkov", 34, "64645", 25000, POSITION.JUNIOR);
+        Employee employee1 = new Employee("Vova", "Semenkov", 34, "64645", 0, POSITION.JUNIOR);
         EmployeeNamePrinter namePrinter = new EmployeeNamePrinter();
         namePrinter.print(employee1);
 
@@ -47,7 +47,7 @@ public class Main {
         }
 
 
-        Employee employee4 = new Employee("Vova", "Semenkov", 34, "64645", 25000, POSITION.JUNIOR);
+        Employee employee4 = new Employee("Vova", "Semenkov", 34, "64645", 25555, POSITION.JUNIOR);
         System.out.println(employee4.getFirstName());
         employee4.setFirstName("New first name");
         System.out.println(employee4.getFirstName());
@@ -66,6 +66,13 @@ public class Main {
         var employee6 = new EmployeeBuilder()
                 .setFirstName("SASHA");
         System.out.println(employee6.getFirstName());
+
+
+        var singleton1 = Singleton.INSTANCE;
+        var singleton2 = Singleton.INSTANCE;
+        //var singleton1 = Singleton.getInstance();
+        //var singleton2 = Singleton.getInstance();
+        System.out.println(singleton1 == singleton2);
 
 
     }
