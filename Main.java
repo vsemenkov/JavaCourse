@@ -1,5 +1,9 @@
 package homeWork2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,7 +28,7 @@ public class Main {
         salaryPrinter.print(employee3);
 
         //ne sozdaem novie peren=mennie a rabotaem s indeksami
-        Employee[] employees = new Employee[2];
+        Employee[] employees = new Employee[5];
         employees[0] = new Employee("Sasha", "Petrov", 35, "AQA", POSITION.JUNIOR);
         employees[1] = new Employee("Igor", "Astakhov", 45, "Develop", POSITION.SENIOR);
 
@@ -35,16 +39,48 @@ public class Main {
         //salaryPrinter.print(employees[1]);
 
         //for (int i = 0; i < employees.length; i++) {
-           // namePrinter.print(employees[i]);
-            //salaryPrinter.print(employees[i]);
+        // namePrinter.print(employees[i]);
+        //salaryPrinter.print(employees[i]);
         //}
 
 
         //Ukorochenaya zapisb
         for (Employee employee : employees) {
+            if (employee != null) {
+                namePrinter.print(employee);
+                salaryPrinter.print(employee);
+            }
+        }
+
+        //realizaciya interfeysa listov cherez list massiviv
+        List<Employee> employeeList = new ArrayList<>();
+        //employeeList.add(new Employee("List", "Massivov", 45, "Develop", POSITION.JUNIOR));
+        //employeeList.add(new Employee("List2", "Massivov2", 25, "Develop", POSITION.MIDDLE));
+        //employeeList.add(new Employee("List3", "Massivov3", 35, "AQA", POSITION.JUNIOR));
+        //employeeList.add(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR));
+        //employeeList.add(new Employee("List4", "Massivov4", 55, "AQA", POSITION.MIDDLE));
+        addToList(new Employee("List", "Massivov", 45, "Develop", POSITION.JUNIOR),employeeList);
+        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
+        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
+        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
+
+        for (Employee employee : employeeList){
             namePrinter.print(employee);
             salaryPrinter.print(employee);
         }
+
+        //Sortirivka JUNIOR, MIDDLE, JUNIOR, SENIOR -> JUNIOR, JUNIOR, MIDDLE, SENIOR
+        //[JUNIOR,MIDDLE] -> [JUNIOR,MIDDLE]
+        //[MIDDLE,JUNIOR] -> [JUNIOR,MIDDLE]
+
+        //for (int i = 0; i < employeeList.size() - 1; i++){
+            //if (employeeList.get(i).position.ordinal() > employeeList.get(i+1).position.ordinal()){
+                //Collections.swap(employeeList, i, i+1);
+            //}
+        //}
+
+        System.out.println(employeeList);
+
 
 
         Employee employee4 = new Employee("Vova", "Semenkov", 34, "64645", 25555, POSITION.JUNIOR);
@@ -78,4 +114,12 @@ public class Main {
 
     }
 
+    public static void addToList( Employee employee, List<Employee> employeeList){
+        if (!employeeList.contains(employee)) {
+            employeeList.add(employee);
+        }
+        else {
+            System.out.println("Duplicated employee " + employee.firstName + " " + employee.lastName);
+        }
+    }
 }

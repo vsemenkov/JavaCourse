@@ -99,4 +99,19 @@ public class Employee {
         this.position = position;
     }
 
+    //pereopredelili class toString dlyz vivoda lista
+    public String toString(){
+        return "Employee info: " + this.firstName + " " + this.lastName + " " + this.position.toString();
+    }
+
+    //pereopredelyaem equals
+    public  boolean equals(Object obj){
+        if (obj instanceof Employee) {
+            if ( ((Employee) obj).firstName.equals(this.firstName) &&
+                    ((Employee) obj).lastName.equals(this.lastName)){
+                return  true;
+            }
+        }
+        return false;
+    }
 }
