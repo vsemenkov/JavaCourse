@@ -60,14 +60,32 @@ public class Main {
         //employeeList.add(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR));
         //employeeList.add(new Employee("List4", "Massivov4", 55, "AQA", POSITION.MIDDLE));
         addToList(new Employee("List", "Massivov", 45, "Develop", POSITION.JUNIOR),employeeList);
-        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
-        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
-        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.SENIOR),employeeList);
+        addToList(new Employee("List4", "Massivov4", 55, "AQA", POSITION.MIDDLE),employeeList);
+        addToList(new Employee("List5", "Massivov5", 55, "AQA", POSITION.MIDDLE),employeeList);
+        addToList(new Employee("List6", "Massivov6", 55, "AQA", POSITION.SENIOR),employeeList);
 
         for (Employee employee : employeeList){
             namePrinter.print(employee);
             salaryPrinter.print(employee);
         }
+
+        int juniorCount = 0;
+        int middleCount = 0;
+        int seniorCount = 0;
+
+        for (Employee employee : employeeList) {
+            if (employee.position == POSITION.JUNIOR){
+                juniorCount++;
+            } else  if (employee.position == POSITION.MIDDLE){
+                middleCount++;
+            } else {
+                seniorCount++;
+            }
+        }
+
+        System.out.println("Junior Count: " + juniorCount);
+        System.out.println("Middle Count: " + middleCount);
+        System.out.println("Senior Count: " + seniorCount);
 
         //Sortirivka JUNIOR, MIDDLE, JUNIOR, SENIOR -> JUNIOR, JUNIOR, MIDDLE, SENIOR
         //[JUNIOR,MIDDLE] -> [JUNIOR,MIDDLE]
