@@ -95,6 +95,7 @@ public class Main {
         }
         System.out.println("==============================================");
         System.out.println("Position Counter: " + counter);
+        System.out.println("Senior Count: " + counter.get(POSITION.SENIOR));
 
 
 
