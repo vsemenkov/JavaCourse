@@ -1,8 +1,6 @@
 package homeWork2;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -86,6 +84,19 @@ public class Main {
         System.out.println("Junior Count: " + juniorCount);
         System.out.println("Middle Count: " + middleCount);
         System.out.println("Senior Count: " + seniorCount);
+        //ili 4erez hesh Map
+        Map<POSITION, Integer> counter = new HashMap<>();
+        for (Employee employee : employeeList) {
+            if (!counter.containsKey(employee.position)){
+                counter.put(employee.position, 1);
+            } else  {
+                counter.put(employee.position, counter.get(employee.position)+1);
+            }
+        }
+        System.out.println("==============================================");
+        System.out.println("Position Counter: " + counter);
+
+
 
         //Sortirivka JUNIOR, MIDDLE, JUNIOR, SENIOR -> JUNIOR, JUNIOR, MIDDLE, SENIOR
         //[JUNIOR,MIDDLE] -> [JUNIOR,MIDDLE]
