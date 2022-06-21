@@ -114,4 +114,23 @@ public class Employee {
         }
         return false;
     }
+
+    public void work(){
+        for (int i = 0; i < 10; i++){
+            System.out.println( firstName + " " + "works: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public int compute(){
+        int result = 1;
+        for (int i = 1; i < 20; i++){
+            result = result * i;
+        }
+        return result;
+    }
 }

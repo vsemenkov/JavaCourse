@@ -65,6 +65,7 @@ public class Main {
         for (Employee employee : employeeList){
             namePrinter.print(employee);
             salaryPrinter.print(employee);
+            employee.work();
         }
 
         int juniorCount = 0;
