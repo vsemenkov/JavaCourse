@@ -1,5 +1,9 @@
 package homeWork2;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -88,6 +92,11 @@ public class Runner {
             }
         }
         callableService.shutdown();
+
+        for (Employee employee : employeeList) {
+            EmployeeInfoWriter writer = new EmployeeInfoWriter(employee);
+            writer.write();
+        }
     }
 
 

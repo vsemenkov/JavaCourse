@@ -101,7 +101,7 @@ public class Employee {
 
     //pereopredelili class toString dlyz vivoda lista
     public String toString(){
-        return "Employee info: " + this.firstName + " " + this.lastName + " " + this.position.toString();
+        return "Employee info: " + this.firstName + " " + this.lastName + " " + this.position.toString() + "\n";
     }
 
     //pereopredelyaem equals
